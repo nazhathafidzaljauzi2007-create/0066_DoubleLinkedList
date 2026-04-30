@@ -173,8 +173,8 @@ void revtraverse()
             cout << i + 1 << ". " << currentNode->nMhs << "  " << endl; 
 
             // Step 3: Move to previous node
-            currentNode = currentNode->prev; // Step 3a: currentNode = currentNode.prev
-            i++;
+            currentNode = currentNode->prev; 
+            i--;
         }
     }
 

@@ -236,7 +236,7 @@ int main()
                 list.addNode();
                 break;
             case '2':
-                list.deleteRecord();
+                list.hapus();
                 break;
             case '3':
                 list.traverse();

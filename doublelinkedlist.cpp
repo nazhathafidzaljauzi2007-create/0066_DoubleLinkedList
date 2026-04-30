@@ -81,8 +81,9 @@ public:
 
         current->next = newNode; // Step 9d: current.next = newNode
     }
+};
 
-    void hapus()
+void hapus()
     {
         if (START == NULL)
         {
@@ -126,7 +127,7 @@ public:
         cout << "Record with roll number " << rollNo << "deleted" << endl;
     }
 
-    void traverse()
+void traverse()
     {
         if (START == NULL)
         {
@@ -142,13 +143,15 @@ public:
         int i = 0;
         while (currentNode != NULL)
         {
+
             cout << i + 1 << ". " << currentNode->nMhs << "  " << endl; 
 
             // Step 3: Move to next node
-            current = current->next; // Step 2a: currentNode = currentNode.next
+            current = current->next; 
             i++;
         }
     }
+
 void revtraverse()
     {
         if (START == NULL)
@@ -178,5 +181,34 @@ void revtraverse()
         }
     }
 
+void searchData()
+    {
+        if (START == NULL)
+        {
+            cout << "\nList is empty" << endl;
+            return;
+        }
+
+        int rollNo;
+        cout << "\nEnter the roll number to search: ";
+        cin >> rollNo;
+
+        Node* current = START;
+
+        // Step 1: Traverse of find matching roll number
+        while (current != NULL && current->nMhs != rollNo)
+            current = current->next;
+        
+        // Step 2: Output result
+        if (current == NULL)
+        {
+            cout << "record not found\n";
+        }
+        else
+        {
+            cout << "Record found\n";
+            cout << "Roll number: " << current->nMhs << endl;
+        }
+    }
 
 };

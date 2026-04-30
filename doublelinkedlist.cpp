@@ -3,3 +3,10 @@
 #include <string>
 using namespace std;
 
+class Node
+{
+    public:
+        int nMhs;
+        Node* next;
+        Node* prev;
+};

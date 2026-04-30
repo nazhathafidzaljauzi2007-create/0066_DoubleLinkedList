@@ -229,5 +229,29 @@ int main()
         cout << "Enter your choice: ";
 
         cin >> choice;
+
+        switch (choice )
+        {
+            case '1':
+                list.addNode();
+                break;
+            case '2':
+                list.deleteRecord();
+                break;
+            case '3':
+                list.traverse();
+                break;
+            case '4':
+                list.revtraverse();
+                break;
+            case '5':
+                list.searchData();
+                break;
+            case '6':
+                cout << "Exiting..." << endl;
+                break;
+            default:
+                cout << "Invalid choice. Please try again." << endl;
+        }
     }
 }

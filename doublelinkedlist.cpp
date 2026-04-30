@@ -247,6 +247,9 @@ int main()
             case '5':
                 list.searchData();
                 break;
+            case '6':
+                cout << "Exiting..." << endl;
+                break;
 
         }
     }

@@ -133,15 +133,21 @@ public:
             cout << "\nList is empty." << endl;
             return;
         }
-
-        cout << "\nRecords in the list are: " << endl;
+        
+        // Step 1: Mark first node as currentNode
         Node* current = START;
-        while (current != NULL)
+
+        // Step 2: Repeat until currentNode == NULL
+        cout << "\nRecords in ascending order of roll number are:\n ";
+        int i = 0;
+        while (currentNode != NULL)
         {
-            cout << current->nMhs << " ";
-            current = current->next;
+            cout << i + 1 << ". " << currentNode->nMhs << "  " << endl; 
+
+            // Step 3: Move to next node
+            current = current->next; // Step 2a: currentNode = currentNode.next
+            i++;
         }
-        cout << endl;
     }
     
 };

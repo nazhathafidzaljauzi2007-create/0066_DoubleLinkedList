@@ -250,7 +250,13 @@ int main()
             case '6':
                 cout << "Exiting..." << endl;
                 break;
-
+            default:
+                cout << "Invalid option\n" << endl;
         }
-    }
+        cout << "\nPress Enter to continue...";
+        cin.ignore();
+        cin.get();  
+        cout << endl;
+        system("clear");
+    } while (choice != '6');
 }
